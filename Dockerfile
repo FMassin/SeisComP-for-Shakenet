@@ -52,5 +52,10 @@ RUN cd /home/sysop && \
 
 ## Start sshd
 USER root
+RUN passwd -d sysop
+RUN sed -i'' -e's/^#PermitRootLogin prohibit-password$/PermitRootLogin yes/' /etc/ssh/sshd_config \
+    && sed -i'' -e's/^#PasswordAuthentication yes$/PasswordAuthentication yes/' /etc/ssh/sshd_config \
+    && sed -i'' -e's/^#PermitEmptyPasswords no$/PermitEmptyPasswords yes/' /etc/ssh/sshd_config \
+    && sed -i'' -e's/^UsePAM yes/UsePAM no/' /etc/ssh/sshd_config
 EXPOSE 22
 CMD ["sh", "-c", "/usr/sbin/sshd -D & mysqld "]
