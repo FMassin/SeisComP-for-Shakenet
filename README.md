@@ -1,0 +1,1 @@
+# SeisComP-for-Shakenet
