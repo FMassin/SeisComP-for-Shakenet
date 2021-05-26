@@ -41,7 +41,10 @@ RUN /etc/init.d/mysql start && \
     mysql -u root -e "GRANT ALL PRIVILEGES ON * . * TO 'sysop'@'localhost'" && \
     mysql -u root -e "FLUSH PRIVILEGES" && \
     mysql -u root seiscomp <  $INSTALL_DIR/share/db/mysql.sql && \
-    su sysop -s /bin/bash -c "source /home/sysop/.profile ; seiscomp start && seiscomp update-config"
+    su sysop -s /bin/bash -c "source /home/sysop/.profile ; seiscomp start && seiscomp update-config ; seiscomp enable scevent"
+
+RUN apt-get install -y libgeo-osm-tiles-perl &&\
+    downloadosmtiles --lat=-90:90 --lon=-180:180 --zoom=0:3 --destdir=$INSTALL_DIR/share/maps/osm --baseurl='https://tile.osm.ch/osm-swiss-style/'
 
 USER sysop
 
