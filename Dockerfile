@@ -26,7 +26,8 @@ RUN cd $INSTALL_DIR/../ && \
     tar xzf seiscomp-maps.tar.gz && \
     rm seiscomp-maps.tar.gz 
 
-RUN wget "https://fdsnws.raspberryshakedata.com/fdsnws/station/1/query?starttime="$(date -u +'%Y-%m-%dT%H:%M:%S')"&format=sc3ml&level=response" -O $INSTALL_DIR/etc/inventory/shakenet.xml
+#RUN wget "https://fdsnws.raspberryshakedata.com/fdsnws/station/1/query?starttime="$(date -u +'%Y-%m-%dT%H:%M:%S')"&format=sc3ml&level=response" -O $INSTALL_DIR/etc/inventory/shakenet.xml
+RUN wget "https://fdsnws.raspberryshakedata.com/fdsnws/station/1/query?format=sc3ml&level=response" -O $INSTALL_DIR/etc/inventory/shakenet.xml
 
 RUN chown -R sysop:sysop $INSTALL_DIR/
 
