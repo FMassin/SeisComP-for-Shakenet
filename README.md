@@ -31,7 +31,8 @@ docker run -d --name seiscomp.shakenet -p 9876:22 fredmassin/seiscomp-for-shaken
 To generate the docker image using the Dockerfile, run:
 
 ```bash
-docker build -f jakarta/Dockerfile -t seiscomp.shakenet:latest .
+git clone https://github.com/FMassin/SeisComP-for-Shakenet.git
+docker build -f SeisComP-for-Shakenet/Dockerfile -t seiscomp.shakenet:latest SeisComP-for-Shakenet/
 docker run -d --name seiscomp.shakenet -p 9876:22 seiscomp.shakenet:latest
 ```
 
