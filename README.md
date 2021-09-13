@@ -24,6 +24,7 @@ To pull the docker image from the cloud, run:
 ```bash
 docker pull fredmassin/seiscomp-for-shakenet:basicdataset
 docker run -d --name seiscomp.shakenet -p 9876:22 -p 5907:5907 fredmassin/seiscomp-for-shakenet:basicdataset 
+docker exec -u 0 -it  seiscomp.shakenet  service vncserver start 
 ```
 
 #### Solution 2: Build (no dataset)
@@ -41,7 +42,6 @@ docker run -d --name seiscomp.shakenet -p 9876:22 -p 5907:5907 seiscomp.shakenet
 You can connect via vnc with:
 
 ```bash
-docker exec -u 0 -it  seiscomp.shakenet  service vncserver start 
 open vnc://sysop:sysop@localhost:5907
 ```
 
