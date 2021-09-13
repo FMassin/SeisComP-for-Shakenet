@@ -19,6 +19,13 @@ WORKDIR $WORK_DIR
 WORKDIR /home/sysop
 
 
+RUN apt-get update && \
+    apt-get install -y \
+        xfce4 \
+        xfce4-goodies \
+        tightvncserver
+
+
 COPY etc/*.cfg $INSTALL_DIR/etc/
 
 RUN cd $INSTALL_DIR/../ && \
@@ -44,15 +51,28 @@ RUN /etc/init.d/mysql start && \
 
 USER sysop
 
-RUN echo "seiscomp check" >> /home/sysop/.profile
+ADD scrc /home/sysop/
+RUN echo "source /home/sysop/scrc" >> /home/sysop/.bashrc
 RUN cd /home/sysop && \
     wget "https://github.com/FMassin/SeisComP-World-Shaded-Imagery-and-Geology/archive/refs/tags/v0.2.tar.gz" -O SCPWSIG.tar.gz && \
     tar xzf SCPWSIG.tar.gz && \
     rm SCPWSIG.tar.gz && \
     ln -s /home/sysop/SeisComP-World-Shaded-Imagery-and-Geology*/bna .seiscomp/bna
 
-## Start sshd
+## Start vncserverd
+RUN mkdir /home/sysop/.vnc/ 
+ADD xstartup /home/sysop/.vnc/
+RUN touch /home/sysop/.Xauthority 
+RUN echo "sysop" | vncpasswd -f >> /home/sysop/.vnc/passwd
 USER root
+RUN chmod 600 /home/sysop/.vnc/passwd
+RUN chmod +x /home/sysop/.vnc/xstartup
+ADD vncserver /etc/init.d/ 
+RUN chmod +x /etc/init.d/vncserver
+
+
+
+## Start sshd
 RUN passwd -d sysop
 RUN sed -i'' -e's/^#PermitRootLogin prohibit-password$/PermitRootLogin yes/' /etc/ssh/sshd_config \
     && sed -i'' -e's/^#PasswordAuthentication yes$/PasswordAuthentication yes/' /etc/ssh/sshd_config \
@@ -60,3 +80,4 @@ RUN sed -i'' -e's/^#PermitRootLogin prohibit-password$/PermitRootLogin yes/' /et
     && sed -i'' -e's/^UsePAM yes/UsePAM no/' /etc/ssh/sshd_config
 EXPOSE 22
 CMD ["sh", "-c", "/usr/sbin/sshd -D & mysqld "]
+#CMD bash service vncserver start

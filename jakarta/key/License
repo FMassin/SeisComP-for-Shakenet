@@ -1,0 +1,99 @@
+THIS DOCUMENT IS A LEGAL AGREEMENT (the "License Agreement") BETWEEN
+
+GFZ Potsdam ("We", "Us")        
+
+AND
+
+Schweizerischer Erdbebendienst/ETH Zürich ("You", "Your")
+
+AS THE ORGANIZATION ON WHOSE BEHALF THIS LICENSE IS UNDERTAKEN 
+DESCRIBED BELOW ("You") IN RELATION TO THE SeisComP3 SOFTWARE 
+(THE "Software"), IN BOTH SOURCE AND OBJECT CODE FORM, AND/OR ALL 
+RELATED MATERIALS. BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE 
+USING THE SOFTWARE, YOU ACCEPT THE FOLLOWING TERMS AND CONDITIONS. 
+IF YOU DO NOT AGREE WITH ANY OF THE TERMS OR CONDITIONS OF THIS 
+LICENSE AGREEMENT, DO NOT PROCEED WITH THE DOWNLOADING, COPYING, 
+INSTALLATION OR ANY OTHER USE OF THE SOFTWARE OR ANY PORTION THEREOF.
+THE SOFTWARE IS PROTECTED BY GERMAN COPYRIGHT LAWS AND INTERNATIONAL 
+COPYRIGHT LAWS, AS WELL AS OTHER INTELLECTUAL PROPERTY LAWS AND 
+TREATIES. THE SOFTWARE IS LICENSED, NOT SOLD.
+
+THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE 
+AND ITS COMPONENTS.
+
+We, GFZ Potsdam, grant You a non-exclusive, non-transferable, lifetime 
+license to the Software solely as set forth in sections 1(a) to 1(f), 
+as applicable, and subject to the terms and conditions of this License 
+Agreement.
+
+1. OWNERSHIP, LICENSE GRANT
+This is a License Agreement and not an agreement for sale. We reserve 
+ownership of all intellectual property rights inherent in or relating to 
+the Software, which include, but are not limited to, all copyright,
+patent rights, all rights in relation to registered and unregistered 
+trademarks (including service marks), confidential information (including 
+trade secrets and know-how) and all rights other than those expressly 
+granted by this Agreement.
+a) No license fee will be charged by Us.
+b) The number of installations is not limited for You within your
+   organization.
+c) You are not allowed to distribute object code (binaries) and/or source
+   code of the Software provided to You by Us. This includes also modified
+   versions. 
+d) Your are free to share your own developments based on the libraries 
+   provided by Us with others.
+e) You are allowed to make backup copies of the Software.
+f) You are not allowed to do any commercial business with the Software.
+
+For the avoidance of doubt, the following are considered examples of 
+commercial uses of the Software: 
+(1) Use at or for a commercial enterprise;                              
+(2) Use for financial gain, personal or otherwise;                  
+(3) Use in connection with administering a commercial web site;         
+(4) Use in connection with the provision of professional service for which
+    you are compensated (including paid system administration);              
+(5) Bundling or integrating the Software with any hardware product or
+    another software product for commercial.       
+
+2. VALIDITY PERIOD
+The license is valid unlimited. The license is no longer valid, without 
+termination, if you violate against any term of this License Agreement. 
+Once the license is invalid You are obliged to delete the Software and all
+copies. You can also end this license agreement by deleting the Software 
+including all copies.
+
+3. COPYRIGHT
+The Software is copyrighted. You explicitly accept the resulting legal 
+protection.
+
+4. UPDATES, ADD-ONS
+This License Agreement is also valid for all updates, service packs or 
+other add-ons of the software, except other terms were agreed with these
+updates, service packs or other add-ons. A right to delivery of updates, 
+service packs or other add-ons is not based hereby.
+
+5. PROHIBITION TO DECOMPILE
+You are not allowed to decompile the software to retrieve the source code.
+
+6. GUARANTEE
+The software is provided “as is”, without warranty of any kind, express or
+implied, including but not limited to the warranties of merchantability, 
+fitness for a particular purpose and noninfringement. In no event shall we
+be lialble for any claim, damages or other liability, whether in an action
+of contract, tort or otherwise, arising from, out of or in connection with
+the software or the use or other dealings with the software.
+
+7. ADDITIONAL AGREEMENT, WRITING
+Amendments to this agreement in verbal form are not existing. Any changes
+and amendments to this agreement shall be in writing to be legally binding.
+
+8. SEVERABILITY CLAUSE
+If at any time a provision or part of a provision of the present License 
+Agreement becomes unlawful, invalid or unenforceable pursuant to the laws
+of one jurisdiction, this will not affect the lawfulness, validity or 
+enforceability of the remaining provisions of the present License Agreement
+in that jurisdiction or in any other jurisdiction.
+
+9. LAW APPLICABLE, JURISDICTION
+This License Agreement is under German law. Jurisdiction is Potsdam.
+
