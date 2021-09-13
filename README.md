@@ -17,18 +17,18 @@ Or follow instructions for your computer :
 https://docs.docker.com/compose/install/#install-compose
 
 ### Get and run 
-#### Solution 1: Pull 
+#### Solution 1: Pull (only way to get basic dataset) 
 
 To pull the docker image from the cloud, run:
 
 ```bash
-docker pull fredmassin/seiscomp-for-shakenet:latest
-docker run -d --name seiscomp.shakenet -p 9876:22 -p 5907:5907 fredmassin/seiscomp-for-shakenet:latest 
+docker pull fredmassin/seiscomp-for-shakenet:basicdataset
+docker run -d --name seiscomp.shakenet -p 9876:22 -p 5907:5907 fredmassin/seiscomp-for-shakenet:basicdataset 
 ```
 
-#### Solution 2: Build 
+#### Solution 2: Build (no dataset)
 
-To generate the docker image using the Dockerfile, run:
+It will miss the basic dataset included in dockerhub image, but, to generate the docker image using the Dockerfile, run:
 
 ```bash
 git clone https://github.com/FMassin/SeisComP-for-Shakenet.git
