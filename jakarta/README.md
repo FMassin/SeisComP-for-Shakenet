@@ -38,15 +38,15 @@ docker run -d --name seiscomp.shakenet -p 9876:22 seiscomp.shakenet:jakarta
 
 ### Use 
 
-First copy your SeisComP3 license files (3 files, see https://www.seiscomp.de/seiscomp3/license.html) within the container:
-```bash
-scp -P 9876 <path to your license files> sysop@localhost:.seiscomp3/key/
-```
-
 The previous will also start an ssh server that you can connect to with (no password):
 
 ```bash
 ssh -p 9876 sysop@localhost
+```
+
+For GUIs, once logged in, you need to copy your SeisComP3 license files (3 files, see https://www.seiscomp.de/seiscomp3/license.html) within the container:
+```bash
+scp -r <user@IP:path to your license files> sysop@localhost:.seiscomp3/
 ```
 
 You can they follow normal SeisComP3 usage (https://docs.gempa.de/seiscomp3/current/).
