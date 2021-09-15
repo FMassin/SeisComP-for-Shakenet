@@ -10,7 +10,7 @@ The only dependency is Docker.
 
 On a Mac you can type in a terminal:
 ```bash
-brew cask install docker
+brew install --cask docker
 ```
 
 Or follow instructions for your computer :
