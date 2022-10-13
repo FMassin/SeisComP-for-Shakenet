@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=scqcv
+Comment=
+Exec=/opt/seiscomp/bin/seiscomp exec scqcv 
+Icon=xfce4-pulseaudio-plugin
+Path=/home/sysop/
+Terminal=false
+StartupNotify=false

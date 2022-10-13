@@ -1,4 +1,4 @@
-# SeisComP-for-Shakenet
+# SeisComP basics - training with basics and Shakenet datasets 
 ## What
 This provides a Docker image to explore Shakenet data (https://shakenet.raspberryshake.org). 
 
@@ -6,9 +6,7 @@ This provides a Docker image to explore Shakenet data (https://shakenet.raspberr
 
 ## How
 ### Dependency
-The only dependency is Docker. 
-
-On a Mac you can type in a terminal:
+The only dependency is Docker. On a Mac you can type in a terminal:
 ```bash
 brew install --cask docker
 ```
@@ -51,4 +49,9 @@ or with ssh (no password):
 ssh -p 9876 sysop@localhost
 ```
 
-You can they follow normal SeisComP usage (http://seiscomp.de).
+You can then follow normal SeisComP usage (http://seiscomp.de).
+
+# to do
+pre-setup and enable seedlink with fifo in the docker ok? (modifié) 
+They will just need to to msrtsimul <file> to start replay (modifié) 
+I'll also setup scautopick and scamp with recordstream = slink://localhost:18000 instead of default in global

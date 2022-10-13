@@ -1,0 +1,11 @@
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=scolv
+Comment=
+Exec=/opt/seiscomp/bin/seiscomp exec scolv 
+Icon=xfce4-pulseaudio-plugin
+Path=/home/sysop/
+Terminal=false
+StartupNotify=false
