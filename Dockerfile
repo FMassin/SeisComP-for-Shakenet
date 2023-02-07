@@ -34,7 +34,7 @@ RUN cd $INSTALL_DIR/../ && \
     rm seiscomp-maps.tar.gz 
 
 #RUN wget "https://fdsnws.raspberryshakedata.com/fdsnws/station/1/query?starttime="$(date -u +'%Y-%m-%dT%H:%M:%S')"&format=sc3ml&level=response" -O $INSTALL_DIR/etc/inventory/shakenet.xml
-RUN wget "https://eida.koeri.boun.edu.tr/fdsnws/station/1/query?format=sc3ml&level=response" -O $INSTALL_DIR/etc/inventory/inventory.xml
+RUN wget "https://eida.koeri.boun.edu.tr/fdsnws/station/1/query?format=sc3ml&level=response" -O $INSTALL_DIR/etc/inventory/koeri.xml
 
 RUN chown -R sysop:sysop $INSTALL_DIR/
 
